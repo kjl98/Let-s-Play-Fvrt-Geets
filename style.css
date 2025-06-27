@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+	background-color: rgb(20, 19, 19);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #181818;
+	/* or any static color you like */
+	min-height: 100vh;
+	position: relative;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 220px;
+	height: 100vh;
+	background: black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 24px 0 0 0;
+	z-index: 10;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul .list {
+	padding: 12px 32px;
+	width: 100%;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 700;
+	position: relative;
+	transition: background 0.3s;
+}
+
+nav ul .list::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: green;
+	position: absolute;
+	left: 0;
+	bottom: 6px;
+	transition: 0.5s;
+}
+
+nav ul .list:hover::after {
+	width: 40%;
+	margin-left: 15px;
+}
+
+
+nav ul li:hover {
+	cursor: pointer;
+}
+
+nav ul i {
+	font-size: large;
+	color: rgb(77, 84, 92);
+	/* margin-left: -30px; */
+	margin-left: 8px;
+}
+
+.brand img {
+	border-radius: 50%;
+	width: 60px;
+	padding: 0 8px;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	/* margin-left: 24px; */
+	margin-bottom: 32px;
+	color: white;
+}
+
+.container {
+	min-height: 72vh;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	font-family: 'Varela Round', sans-serif;
+	display: flex;
+	margin: 23px auto;
+	width: 70%;
+	border-radius: 12px;
+	padding: 34px;
+	background-image: url("download (3).jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	border-top: 1px solid green;
+	margin-left: 20%;
+	/* width of nav + some gap */
+}
+
+#arijitImg,
+#pritamImg {
+	width: 45px;
+	border-radius: 50%;
+	margin-left: 30px;
+	margin-bottom: -11px;
+}
+
+.bottom {
+	position: sticky;
+	height: 100px;
+	background-color: rgb(5, 5, 5);
+	color: white;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-left: 12%;
+}
+
+.icons {
+	margin-top: 14px;
+	cursor: pointer;
+	font-size: smaller;
+}
+
+.icons i:hover {
+	color: rgb(33, 102, 230);
+}
+
+#progressBar {
+	width: 40vw;
+	text-align: center;
+	cursor: pointer;
+}
+
+.songItemContainer {
+	margin-top: 40px;
+	border-top: 1px solid green;
+	padding-right: 20px;
+}
+
+.songItem {
+	height: 35px;
+	display: flex;
+	align-items: center;
+	width: 400px;
+	background-color: rgb(70, 69, 69);
+	color: black;
+	margin: 12px 0;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 36px;
+}
+
+.songItem:hover {
+	background-color: rgb(148, 147, 147);
+	color: rgb(23, 23, 23);
+	font-size: 15px;
+	width: 420px;
+	border-bottom: 1.5px solid green;
+	border-right: 1.5px solid green;
+}
+
+.songItem img {
+	width: 30px;
+	height: 30px;
+	margin: 0 20px;
+	border-radius: 34px;
+}
+
+.songItemplay {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.cover {
+	transition: transform 0.3s;
+}
+
+.cover.revolve {
+	animation: revolve 9s linear infinite;
+}
+
+@keyframes revolve {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.songItem.active,
+.songItem:hover {
+	background: rgb(148, 147, 147);
+	/* Apne hover ka background yahan paste karein */
+	transition: background 0.3s;
+}
+
+.timestamp {
+	margin: 0 23px;
+}
+
+.timestamp i {
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.songInfo {
+	position: absolute;
+	left: 35vw;
+	margin-top: 25px;
+	font-size: 1.3rem;
+	margin-left: -170px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.songInfo img {
+	margin-top: 5px;
+	opacity: 0;
+	transition: opacity 0.4s ease-in;
+}
+
+#gif {
+	margin-left: 30px;
+	height: 50px;
+	width: 80px;
+	margin-top: -10px;
+}
+
+#currentSongName {
+	margin-left: -120px;
+}
+
+.Explore-btn {
+	padding: 14px 32px;
+	background: #fad0c4;
+	color: #222;
+	font-size: 1.2rem;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	box-shadow: 0 2px 12px #2222;
+	margin-left: 20px;
+	transition:
+		background 0.7s cubic-bezier(.4, 2, .6, 1),
+		color 0.3s,
+		transform 0.3s,
+		box-shadow 0.3s;
+	display: inline-block;
+	border: none;
+	outline: none;
+}
+
+.Explore-btn:hover,
+.Explore-btn:focus {
+	background: #43e97b;
+	color: #181818;
+	transform: scale(1.07) translateY(-2px);
+	box-shadow: 0 8px 24px #43e97b55, 0 2px 12px #fad0c455;
+	cursor: pointer;
+}
+
+.home-container {
+	margin-left: 15%;
+}
+
+
+/* =======================
+   Responsive Media Queries
+   ======================= */
+
+/* For tablets and below */
+@media (max-width: 1024px) {
+	nav {
+		width: 160px;
+	}
+
+	.container {
+		width: 90%;
+		margin-left: 170px;
+		padding: 18px;
+		font-size: 1rem;
+	}
+
+	.home-container {
+		margin-left: 170px;
+	}
+
+	.songItem {
+		width: 90vw;
+		max-width: 350px;
+	}
+}
+
+/* Hide hamburger by default */
+.nav-toggle {
+	display: none;
+	font-size: 2rem;
+	color: #fff;
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	z-index: 1001;
+	cursor: pointer;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+	nav {
+		position: static;
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		padding: 0;
+		margin-top: -55px;
+	}
+
+	nav ul {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		width: 50%;
+	}
+
+	nav ul .list,
+	.brand {
+		font-size: 1rem;
+		padding: 8px 10px;
+		margin: 0;
+	}
+
+	nav ul .list {
+		margin-left: 20%;
+	}
+
+	.brand img {
+		width: 36px;
+		padding: 0 4px;
+	}
+
+	.container,
+	.home-container {
+		margin-top: 150px;
+		margin-left: 0;
+		width: 90vw;
+		padding: 10px;
+		min-height: 60vh;
+	}
+
+	.songItem {
+		width: 75vw;
+		max-width: 98vw;
+		font-size: 0.95rem;
+	}
+
+	.songItem:hover {
+		width: 80vw;
+	}
+
+	.songItem img {
+		margin: 0 8px;
+		width: 24px;
+		height: 24px;
+	}
+
+	.bottom {
+		margin-left: 0;
+		width: 100vw;
+		min-width: 0;
+		font-size: 0.95rem;
+	}
+
+	#progressBar {
+		width: 80vw;
+	}
+
+	.Explore-btn {
+		margin-left: 0;
+		margin-top: 10px;
+		width: 90vw;
+		max-width: 300px;
+		font-size: 1rem;
+		padding: 10px 0;
+	}
+
+	.home-container {
+		align-items: center;
+		justify-content: flex-start;
+		min-height: 60vh;
+	}
+
+	.nav-toggle {
+		display: block;
+		margin-top: 50px;
+	}
+
+	nav ul {
+		display: none;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100vw;
+		background: #111;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 20px 0;
+		z-index: 1000;
+	}
+
+	nav ul.active {
+		display: flex;
+	}
+	#gif{
+		height: 30px;
+		width: 50px;
+	}
+	.songInfo{
+		margin-left: -100px;
+		margin-top: 35px;
+		font-size: 0.7rem;
+		display: inline;
+		flex-wrap: nowrap;
+	}
+	.songInfo p{
+		display: none;
+	}
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+
+	nav ul .list,
+	.brand {
+		font-size: 0.85rem;
+		padding: 6px 4px;
+	}
+
+	.brand img {
+		width: 28px;
+	}
+
+	.container,
+	.home-container {
+		padding: 4px;
+		font-size: 0.95rem;
+	}
+
+	.songItem {
+		font-size: 0.9rem;
+		padding: 4px 2px;
+	}
+
+	.Explore-btn {
+		font-size: 0.95rem;
+		padding: 8px 0;
+	}
+
+	.bottom {
+		font-size: 0.9rem;
+		height: 80px;
+	}
+}

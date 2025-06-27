@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Podcasts | Let's Play</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="podcast.css" />
+    <!-- (optional, for custom podcast styles) -->
+  </head>
+  <body>
+    <nav>
+      <i class="fa-solid fa-bars nav-toggle"></i>
+      <ul>
+        <li class="brand">
+          <img src="pp.png.jpg" alt="logo" />Let's Play fvrt Geets
+        </li>
+        <li class="list"><a href="index.html">Home</a></li>
+        <li class="list"><a href="About.html">About</a></li>
+        <li class="list"><a href="Music.html">Music</a></li>
+        <li class="list"><a href="Podcasts.html">Podcasts</a></li>
+      </ul>
+    </nav>
+    <div class="podcasts-container">
+      <h1>🎙️ Podcasts</h1>
+      <p style="color: #aaa">
+        Explore inspiring, entertaining, and informative podcasts. <br />
+        Select a podcast below to start listening!
+      </p>
+      <div class="podcast-list">
+        <div class="podcast-card">
+          <h2>Kahani Express with Neelesh Mishra</h2>
+          <br />
+          <div class="podcast-img-overlay">
+            <img
+              src="Neelesh-Misra-759.avif"
+              alt="Podcast 1"
+              style="width: 100%"
+            />
+            <div class="overlay"></div>
+          </div>
+          <br />
+          <!-- <audio controls src="podcast1.mp3"></audio> -->
+          <a
+            href="https://www.jiosaavn.com/shows/kahaani-express-with-neelesh-misra/6/zkv096yLB7I_"
+            >Play now</a
+          >
+        </div>
+        <div class="podcast-card">
+          <h2>Love Stories</h2>
+          <br />
+          <div class="podcast-img-overlay">
+            <img src="love-stories.jpg" alt="Podcast 2" style="width: 100%" />
+            <div class="overlay"></div>
+          </div>
+          <br />
+          <!-- <audio controls src="podcast2.mp3"></audio> -->
+          <a
+            href="https://www.jiosaavn.com/shows/-%e0%a4%b2%e0%a4%b5-%e0%a4%b8%e0%a5%8d%e0%a4%9f%e0%a5%8b%e0%a4%b0%e0%a5%80-/1/PGFMH,Db98Q_"
+            >Play now</a
+          >
+        </div>
+        <div class="podcast-card">
+          <h2>Raising Parents</h2>
+          <br />
+          <div class="podcast-img-overlay">
+            <img
+              src="raising-parents.jpg"
+              alt="Podcast 3"
+              style="width: 100%"
+            />
+            <div class="overlay"></div>
+          </div>
+          <br />
+          <!-- <audio controls src="podcast3.mp3"></audio> -->
+          <a
+            href="https://www.jiosaavn.com/shows/raising-parents/2/d87cdhM-eIg_"
+            >Play now</a
+          >
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      &copy; Kajal 2025 Let's Play. Made with ❤️ for music lovers.
+    </footer>
+    <script>
+      document.querySelector(".nav-toggle").onclick = function () {
+        document.querySelector("nav ul").classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
